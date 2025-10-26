@@ -6,6 +6,7 @@ import Script from "next/script";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Architects_Daughter } from "next/font/google";
 import IntroAnimation from "@/components/intro-animation";
+import ContentWrapper from "@/components/content-wrapper";
 
 const architectsDaughter = Architects_Daughter({
   weight: "400",
@@ -33,19 +34,21 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <IntroAnimation />
-          <ErrorReporter />
-          <Script
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
-            strategy="afterInteractive"
-            data-target-origin="*"
-            data-message-type="ROUTE_CHANGE"
-            data-include-search-params="true"
-            data-only-in-iframe="true"
-            data-debug="true"
-            data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
-          />
-          {children}
-          <VisualEditsMessenger />
+          <ContentWrapper>
+            <ErrorReporter />
+            <Script
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts//route-messenger.js"
+              strategy="afterInteractive"
+              data-target-origin="*"
+              data-message-type="ROUTE_CHANGE"
+              data-include-search-params="true"
+              data-only-in-iframe="true"
+              data-debug="true"
+              data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
+            />
+            {children}
+            <VisualEditsMessenger />
+          </ContentWrapper>
         </ThemeProvider>
       </body>
     </html>
