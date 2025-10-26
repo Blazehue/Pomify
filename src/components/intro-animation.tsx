@@ -5,24 +5,36 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function IntroAnimation() {
   const [showIntro, setShowIntro] = useState(true);
-  const [hasShown, setHasShown] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     // Check if intro has been shown before
     const introShown = localStorage.getItem("pomify-intro-shown");
+    
     if (introShown) {
       setShowIntro(false);
-      setHasShown(true);
     }
+    
+    // Mark as ready after checking localStorage
+    setIsReady(true);
   }, []);
 
   const handleClick = () => {
     setShowIntro(false);
     localStorage.setItem("pomify-intro-shown", "true");
-    setHasShown(true);
+    // Dispatch event to show content
+    window.dispatchEvent(new Event("intro-complete"));
   };
 
-  if (hasShown && !showIntro) return null;
+  // Don't render anything until we've checked localStorage
+  if (!isReady) {
+    return (
+      <div className="fixed inset-0 z-50 bg-background" />
+    );
+  }
+
+  // If intro shouldn't show, return null
+  if (!showIntro) return null;
 
   return (
     <AnimatePresence>
