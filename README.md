@@ -635,7 +635,7 @@ A: Yes, Pomify is completely free and open-source under the MIT license.
 ### Technical Questions
 
 **Q: Which browsers are supported?**  
-A: Pomify works on all modern browsers (Chrome, Firefox, Safari, Edge). For the best experience, use the latest version.
+A: Pomify works on all modern browsers (Chrome, Firefox, Safari, Edge). For the best experience, use the latest version.(Even Comet)
 
 **Q: Why do notifications not work?**  
 A: You need to grant notification permissions to your browser. Check your browser settings if notifications aren't appearing.
