@@ -91,11 +91,11 @@ The Pomodoro Technique is a time management method developed by Francesco Cirill
 
 ### 🔔 Notifications & Alerts
 
-- **Browser Notifications** - Desktop alerts when sessions complete
+- **Browser Notifications** - Desktop alerts when sessions complete.
 - **Sound Effects** - Audio cues for timer events (customizable volume)
-- **Visual Indicators** - On-screen alerts and status updates
-- **Permission Management** - Easy notification settings control
-- **Toast Messages** - Non-intrusive feedback for user actions
+- **Visual Indicators** - On-screen alerts and status updates.
+- **Permission Management** - Easy notification settings control.
+- **Toast Messages** - Non-intrusive feedback for user actions.
 
 ### 💾 Data Management
 
