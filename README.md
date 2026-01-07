@@ -1,4 +1,4 @@
-# 🍅 Pomify - Pomodoro Timer App
+# 🍅 Pomify - Pomodoro Timer App.
 
 > Master your time, amplify your focus. A beautiful, feature-rich Pomodoro timer designed for peak productivity.
 
